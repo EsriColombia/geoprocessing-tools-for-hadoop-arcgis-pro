@@ -17,13 +17,8 @@ The __Geoprocessing Tools for Hadoop (ArcGIS Pro)__ proporciona herramientas par
 
 ## Instrucciones
 1. Descargar este repositorio como un archivo .zip y descomprimalo en la ubicación que desee o clone el repositorio con una herramienta git.
-2.
-3. In the ‘ArcToolbox’ pane of [ArcGIS Desktop](http://www.esri.com/software/arcgis/arcgis-for-desktop/), 
-use the [‘Add Toolbox…’ command](http://resources.arcgis.com/en/help/main/10.2/index.html#//003q0000001m000000) 
-to add the Hadoop Tools toolbox (the HadoopTools.pyt file you saved in step 1) file 
-into ArcGIS Desktop.
-4. Use the tools individually, or use them in models and scripts, such as the examples 
-in: [GIS Tools for Hadoop](https://github.com/Esri/gis-tools-for-hadoop).
+2. Acceder a la Caja de herramientas de [ArcGIS Pro](http://www.esri.com/en/software/arcgis-pro), 
+3. Use las herramientas individualmente, o uselas en modelos o scripts python.
 
 ## Requirements
 
@@ -31,15 +26,13 @@ in: [GIS Tools for Hadoop](https://github.com/Esri/gis-tools-for-hadoop).
 * Un sistema Hadoop con soporte WebHDFS.
 
 ## Dependencies
-* WebHDFS and Requests are bundled-in and reside in the tool folder.
-* A Python library webhdfs-py is required for WebHDFS support.  Source is located 
-at [webhdfs-py](https://github.com/Esri/webhdfs-py).
-* The Requests python library is required for OozieUtils.py (installation doc is located 
-at http://docs.python-requests.org/en/latest/user/install/#install).
+* WebHDFS que reside en la carpeta de la herramienta.
+* La librería de Python webhdfs-py es requerida para soporte WebHDFS.
+* La librería de Python Requests es requerida para OozieUtils.py 
 
-## Resources
+## Recursos
 
-* [GeoData Blog on the ArcGIS Blogs](http://blogs.esri.com/esri/arcgis/author/jonmurphy/)
+* [GeoData Blog en ArcGIS](http://blogs.esri.com/esri/arcgis/author/jonmurphy/)
 * [Big Data Place on GeoNet](https://geonet.esri.com/groups/big-data)
 * [ArcGIS Geodata Resource Center]( http://resources.arcgis.com/en/communities/geodata/)
 * [ArcGIS Blog](http://blogs.esri.com/esri/arcgis/)
@@ -47,11 +40,7 @@ at http://docs.python-requests.org/en/latest/user/install/#install).
 
 ## Issues
 
-Find a bug or want to request a new feature?  Please let us know by submitting an issue.
-
-## Contributing
-
-Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/esri/contributing)
+Por favor haganos saber si encuentra algún bug.
 
 ## Licensing
 Copyright 2013-2016 Esri
