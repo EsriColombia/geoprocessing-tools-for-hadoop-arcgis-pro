@@ -10,7 +10,7 @@ The __Geoprocessing Tools for Hadoop (ArcGIS Pro)__ proporciona herramientas par
 * Herramientas que copian archivos desde ArcGIS a Hadoop y viceversa.
 * Herramientas para ejecutar un flujo de trabajo [Oozie](http://oozie.apache.org/) en Hadoop, y verificar el estado del flujo de trabajo.
 
-## Referencias ESRI Inc.
+## Referencias.
 
 * [Wiki](https://github.com/Esri/geoprocessing-tools-for-hadoop/wiki) de herramientas de geoprocesamiento disponibles.
 * [Tutoriales](https://github.com/Esri/gis-tools-for-hadoop/wiki) on how to run the geoprocessing tools.
