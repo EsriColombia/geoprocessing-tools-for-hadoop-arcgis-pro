@@ -1,4 +1,3 @@
-#
 import arcpy
 from OozieUtil import Configuration,Oozie,OozieError
 
