@@ -1,4 +1,4 @@
-# Ejemplo de agregación (movilidad)
+# Ejemplo 1. Agregación
 En este ejemplo se tienen en cuenta datos de recorridos de vehiculos en un intervalo de tiempo definido. 
 
 
@@ -79,7 +79,7 @@ OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat';
 
 Ejecute el Análisis:
 ```sql
-FROM (SELECT ST_Bin(0.001, ST_Point(longitude, latitude)) bin_id, * FROM m12_00) bins
+FROM (SELECT ST_Bin(0.001, ST_Point(longitude, latitude)) bin_id, * FROM m01) bins
 INSERT OVERWRITE TABLE agg_res
 SELECT ST_BinEnvelope(0.001, bin_id) shape, count(*) count
 GROUP BY bin_id;
