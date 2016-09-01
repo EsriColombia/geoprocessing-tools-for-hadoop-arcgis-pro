@@ -21,7 +21,7 @@ hadoop fs -ls movilidad-demo
 
 Inicie la consola de comandos Hive.
 
-> **Note**: Si tiene algun problema con Hive vea [here](https://github.com/Esri/spatial-framework-for-hadoop/wiki/ST_Geometry-for-Hive-Compatibility-with-Hive-Versions) la lista completa de las compatibilidades con ST_Geometry.
+> **Note**: Si tiene algun problema con Hive vea [aqui](https://github.com/Esri/spatial-framework-for-hadoop/wiki/ST_Geometry-for-Hive-Compatibility-with-Hive-Versions) la lista completa de las compatibilidades con ST_Geometry.
 
 ```bash
 # use '-S' para modo silencioso
