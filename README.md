@@ -1,5 +1,5 @@
 # geoprocessing-tools-for-hadoop-arcgis-pro
-The __Geoprocessing Tools for Hadoop (ArcGIS Pro)__ proporciona herramientas para ayudar con la integración con Hadoop. Específicamente las herramientas permiten:
+El __Geoprocessing Tools for Hadoop (ArcGIS Pro)__ proporciona herramientas para ayudar con la integración con Hadoop. Específicamente las herramientas permiten:
 
 * Permite el intercambio de datos entre una [ArcGIS Geodatabase](http://resources.arcgis.com/en/help/main/10.2/index.html#/What_is_a_geodatabase/003n00000001000000/) y un Sistema Hadoop, y  
 * Permite a los usuarios de ArcGIS ejecutar Jobs.
@@ -12,7 +12,8 @@ The __Geoprocessing Tools for Hadoop (ArcGIS Pro)__ proporciona herramientas par
 
 ## Referencias.
 
-* [Wiki](https://github.com/Esri/geoprocessing-tools-for-hadoop/wiki) de herramientas de geoprocesamiento disponibles.
+* [Wiki](https://github.com/EsriColombia/geoprocessing-tools-for-hadoop-arcgis-pro/wiki) de herramientas de geoprocesamiento para ArcGIS Pro.
+* [Wiki](https://github.com/Esri/geoprocessing-tools-for-hadoop/wiki) de herramientas de geoprocesamiento para ArcMap disponibles.
 * [Tutoriales](https://github.com/Esri/gis-tools-for-hadoop/wiki) on how to run the geoprocessing tools.
 
 ## Instrucciones
@@ -33,8 +34,8 @@ The __Geoprocessing Tools for Hadoop (ArcGIS Pro)__ proporciona herramientas par
 ## Recursos
 
 * [GeoData Blog en ArcGIS](http://blogs.esri.com/esri/arcgis/author/jonmurphy/)
-* [Big Data Place on GeoNet](https://geonet.esri.com/groups/big-data)
-* [ArcGIS Geodata Resource Center]( http://resources.arcgis.com/en/communities/geodata/)
+* [Big Data Place en GeoNet](https://geonet.esri.com/groups/big-data)
+* [Centro de Recursos ArcGIS Geodata]( http://resources.arcgis.com/en/communities/geodata/)
 * [ArcGIS Blog](http://blogs.esri.com/esri/arcgis/)
 * [twitter@esri](http://twitter.com/esri)
 
