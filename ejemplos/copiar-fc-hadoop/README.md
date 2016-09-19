@@ -1,7 +1,7 @@
 # Copiar FeatureClass a HDFS
 
 
-![](../../FC2JSON2HDFS.JPG)
+![](FC2JSON2HDFS.JPG)
 
 
 
