@@ -1,6 +1,6 @@
 # Copiar FeatureClass a HDFS
 
-![](/img/01.JPG)
+![](img/01.JPG)
 
 
 
