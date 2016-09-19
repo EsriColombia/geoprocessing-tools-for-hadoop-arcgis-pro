@@ -1,7 +1,8 @@
 # Copiar FeatureClass a HDFS
 
+![alt tag](https://github.com/EsriColombia/geoprocessing-tools-for-hadoop-arcgis-pro/img/FC2JSON2HDFS.JPG FC2JSON2HDFS.JPG)
 
-![](FC2JSON2HDFS.JPG)
+
 
 
 
