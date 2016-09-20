@@ -1,7 +1,5 @@
 ## Movilidad
 
-![](img/01.JPG)
-
 En este escenario se describe la integración de información desde el SIG hacia la infraestructura Hortonworks. En este escenario para realizar las operaciones espaciales usando Hive se cuenta con:
 
 * Unidad Administrativa: Se refiere al feature class de Barrios, el cual se requiere para realizar las agregaciones.
@@ -9,4 +7,16 @@ En este escenario se describe la integración de información desde el SIG hacia l
 * Modelo de Geoprocesamiento para que usando ArcGIS Pro, automatizar los procesos e integrar las herramientas.
 
 # Copiar FeatureClass a HDFS
+
+![](img/01.JPG)
+
+Como parte de la integración hacia Hadoop las herramientas permiten desde ArcGIS Pro, realizar la conversión de Información desde un formato geográfico (FeatureClass) a un formato JSON, el cual puede ser utilizado en Hadoop para ser procesado.  Siga los siguientes pasos para realizar la transformación y copiado del Feature Class Barrio.
+
+1. Para realizar el copiado, previamente debe existir la carpeta donde reposará la información.  En al caso que no extista deberá ejecutar los siguientes comando por consola en el nodo de Hadoop:
+
+ 		#Crear la carpeta si es necesario.
+        hadoop fs -mkdir movilidad/data
+        
+2. Utilizando la Caja de Herramientas BigData.tbx, ejecute el modelo 	 
+
 
