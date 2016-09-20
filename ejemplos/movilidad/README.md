@@ -50,7 +50,7 @@ Cree un directorio en Hadoop si no existe previamente, utilizando linea de coman
 	hadoop fs -mkdir movilidad
     hadoop fs -mkdir movilidad/data
     hadoop fs -mkdir movilidad/data/2016-02
-``
+```
 
 Utilizando el modelo descrito anteriormente copie el archivo **movilidad-2016-02-09-vel.csv**
 En el caso que los datos esten en archivo en el nodo de Hadoop use el comando siguiente para copiarlos a HDFS
