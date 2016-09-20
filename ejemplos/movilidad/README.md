@@ -125,4 +125,7 @@ INSERT OVERWRITE TABLE agg_resultado
 SELECT ST_BinEnvelope(0.001, bin_id) shape, count(*) count, avg(v) v
 GROUP BY bin_id;
 ```
+Una vez se ejecuta el comando Hive, se inicia el proceso como se muestra en la imagen
+
+![](img/05.JPG)
 
