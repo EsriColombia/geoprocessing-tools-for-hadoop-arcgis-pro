@@ -15,8 +15,21 @@ Como parte de la integración hacia Hadoop las herramientas permiten desde ArcGIS
 1. Para realizar el copiado, previamente debe existir la carpeta donde reposará la información.  En al caso que no extista deberá ejecutar los siguientes comando por consola en el nodo de Hadoop:
 
  		#Crear la carpeta si es necesario.
+ 		hadoop fs -mkdir movilidad
         hadoop fs -mkdir movilidad/data
         
-2. Utilizando la Caja de Herramientas BigData.tbx, ejecute el modelo 	 
+2. Utilizando la Caja de Herramientas BigData.tbx, ejecute el modelo "FC2JSON2HDFS (Movilidad)"
+
+ ![](img/02.JPG)
+
+Especifique los parámetros:
+
+	FC: Feature Class que será transformado a JSON
+	Barrios.json: Archivo JSON resultado de la transformación a formato JSON
+	HDFS Server Hostname: sandbox.hortonworks.com
+	HDFS TCP Port Number: 50070
+	HDFS Username: root
+	HDFS Remote File: /user/root/movilidad/data/Barrios.json 
+
 
 
