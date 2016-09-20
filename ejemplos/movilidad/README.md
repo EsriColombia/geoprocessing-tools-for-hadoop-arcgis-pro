@@ -160,25 +160,10 @@ Adicione el resultado del Modelo en ArcGIS Pro, y clasefiquelos por los campos t
 ![](img/10.JPG)
 
 
-
-
 # Agregación de Datos Formato CSV en Polígonos.
-En este ejemplo se tienen en cuenta datos de recorridos de vehiculos en un intervalo de tiempo definido, y areas administrativas (Barrios) que serán usados para la agregación.
+A menudo es muy util realizar la agregación de los puntos de los vehiculos en areas admnistrativas como por ejemplo Localidades o Municipios. Para ello las herramientas de geoprocesamiento le ayudaran a realizar estos procesos de agregación, teniendo en cuenta estos procesos.
 
-Cree un directorio en Hadoop si no existe previamente, utilizando linea de comando.
-
-```bash
-	hadoop fs -mkdir movilidad
-    hadoop fs -mkdir movilidad/data
-    hadoop fs -mkdir movilidad/data/2016-02
-```
-
-Utilizando el modelo descrito anteriormente copie el archivo **movilidad-2016-02-09-vel.csv**
-En el caso que los datos esten en archivo en el nodo de Hadoop use el comando siguiente para copiarlos a HDFS
-
-```bash
-hadoop fs -put data/2016-02  movilidad/data
-```
+Para realizar el proceso de agregación es necesario seguir con lo siguiente, una vez que se ha hecho el proceso descrito en  **Transformación de FeatureClass JSON y copia a  HDFS**
 
 Inicie la consola de comandos Hive.
 
@@ -206,55 +191,49 @@ create temporary function ST_Contains as 'com.esri.hadoop.hive.ST_Contains';
 > Esta es una implementacion mínima de funciones ST_Geometry que se encuentran en [Hive Spatial Library](https://github.com/Esri/spatial-framework-for-hadoop/wiki/Hive-Spatial).  El listado de funciones disponibles en [linked repository](https://github.com/Esri/spatial-framework-for-hadoop/wiki/UDF-Documentation).
 
 
-Elimine la tabla M01 si existe:
+Elimine la tabla BarriosDemo si existe:
 ```bash
-drop table M01;
+drop table BarriosDemo;
 ```
-Defina el esquema para para la creacion de la tabla.  Los datos estan almacenados en formato CSV (valores separados por coma), el cual esta soportado por Hive de forma Nativa.
-
+Defina el esquema para para la creacion de la tabla, teniendo en cuenta que los barrios estan en formato JSON.
 
 ```sql
-CREATE TABLE m01 (id string,booking_id string,driver_id string,created_at string,latitude DOUBLE,longitude DOUBLE,d DOUBLE,t DOUBLE,v DOUBLE)
-ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
-STORED AS TEXTFILE;
-```
-
-Cargue los datos en la tabla:
-```sql
-LOAD DATA INPATH 'movilidad/data/2016-02/movilidad-2016-02-09-vel.csv' OVERWRITE INTO TABLE M01; 
-```
-
-Defina la tabla que almacenará los Barrios
-
-
-
-
-
-
-Cree la tabla donde se almacenará el resultado del análisis.
-
-Elimine la tabla de resultados de existir:
-```sql
-DROP TABLE agg_resultado;
-```
-
-```sql
-CREATE TABLE agg_resultado(area binary, count double,v double)
+CREATE TABLE BarriosDemo (COD string,BARRIO string,Localidad string,CodLocalidad string,BoundaryShape binary)                                         
 ROW FORMAT SERDE 'com.esri.hadoop.hive.serde.JsonSerde'              
 STORED AS INPUTFORMAT 'com.esri.json.hadoop.EnclosedJsonInputFormat'
 OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat';
 ```
+Use el siguiente comando para cargar la tabla con los Barrios que se cargaron en HDFS previamente.
 
-
-Ejecute el Análisis de cluster:
 ```sql
-FROM (SELECT ST_Bin(0.001, ST_Point(longitude, latitude)) bin_id, * FROM m01) bins
-INSERT OVERWRITE TABLE agg_resultado
-SELECT ST_BinEnvelope(0.001, bin_id) shape, count(*) count, avg(v) v
-GROUP BY bin_id;
+LOAD DATA INPATH 'movilidad/data/Barrios.json' OVERWRITE INTO TABLE BarriosDemo;
+```
+
+Cree la tabla que almacenará el resultado de la agreagación por el Barrio.
+
+```sql
+CREATE TABLE BarrioAgg(COD String, velocidad double,contador double)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+   "separatorChar" = ",",
+   "quoteChar"     = "'",
+   "escapeChar"    = "\\"
+)  
+STORED AS TEXTFILE;
+
+```
+Usando el siguiente comando realizará el proceso de agregación
+
+```sql
+FROM (SELECT BarriosDemo.COD, avg(v) avgVelocidad, count(*) contador  FROM BarriosDemo
+JOIN M01 WHERE ST_Contains(BarriosDemo.boundaryshape, ST_Point(M01.longitude, M01.latitude)) GROUP BY BarriosDemo.COD) A
+INSERT OVERWRITE TABLE BarrioAgg
+SELECT COD, avgVelocidad,contador;
 ```
 Una vez se ejecuta el comando Hive, se inicia el proceso como se muestra en la imagen
 
-![](img/05.JPG)
+![](img/11.JPG)
+
+Como Resultado se creará un archivo CSV con los valores de velocidad y el conteo por cada Barrio.
 
 
