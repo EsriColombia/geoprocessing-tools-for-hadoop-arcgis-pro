@@ -24,12 +24,12 @@ Como parte de la integración hacia Hadoop las herramientas permiten desde ArcGIS
 
  Especifique los parámetros:
 
-	FC: Feature Class que será transformado a JSON
+	FC: Feature Class que será transformado a JSON.
 	Barrios.json: Archivo JSON resultado de la transformación a formato JSON.
-	HDFS Server Hostname: sandbox.hortonworks.com
-	HDFS TCP Port Number: 50070
-	HDFS Username: root
-	HDFS Remote File: /user/root/movilidad/data/Barrios.json 
+	HDFS Server Hostname: sandbox.hortonworks.com.
+	HDFS TCP Port Number: 50070.
+	HDFS Username: root.
+	HDFS Remote File: /user/root/movilidad/data/Barrios.json. 
 
 
 
