@@ -136,9 +136,23 @@ Terminado el proceso se ha creado el resultado en la tabla **agg_resultado** en 
 ![](img/06.JPG)
 
 ##Cargue de Información en ArcGIS Pro
-Para visualizar la información una vez procesada por Hadoop, 
+Para visualizar la información una vez procesada por Hadoop, debe usarse las herramientas de geoprocesamiento CopyFromHDFS, el cual se encarga de copiar los datos procesados en Hive , almacenados en HDFS a un Feature Class.  Como parte del escenario el siguiente es un Modelo de Geoprocesarimiento que integra la herramienta. 
 
 ![](img/07.JPG)
+
+Ejecute el modelo de Geoprocesamiento
+
+![](img/09.JPG)
+
+Verifique los parámetros del modelo: 
+
+  
+   []Nombre FeatureClass: ClusterMovilidad
+   []HDFS Remote File: /apps/hive/warehouse/agg_resultado
+   
+> **Nota**: Los parámetros de conexion al Cluster Hadoop estan especificados en el modelo. De requerirse cambiarlos estos deben ser modificados en el modelo.
+
+
 ![](img/08.JPG)
 
 
