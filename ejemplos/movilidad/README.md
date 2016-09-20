@@ -42,9 +42,7 @@ Como parte de la integración hacia Hadoop las herramientas permiten desde ArcGIS
 Como resultado de este proceso se realizó la integración de información con HDFS.
 
 # Agregación de Datos en Formato CSV en Cluster de Comportamiento.
-##DOS
-###TRES
-####CUATRO
+
 En este ejemplo se tienen en cuenta datos de recorridos de vehiculos en un intervalo de tiempo definido. 
 
 Cree un directorio en Hadoop si no existe previamente, utilizando linea de comando.
@@ -86,6 +84,7 @@ create temporary function ST_Contains as 'com.esri.hadoop.hive.ST_Contains';
 ```
 
 > Esta es una implementacion mínima de funciones ST_Geometry que se encuentran en [Hive Spatial Library](https://github.com/Esri/spatial-framework-for-hadoop/wiki/Hive-Spatial).  El listado de funciones disponibles en [linked repository](https://github.com/Esri/spatial-framework-for-hadoop/wiki/UDF-Documentation).
+
 
 
 Elimine la tabla M01 si existe:
@@ -136,8 +135,11 @@ Terminado el proceso se ha creado el resultado en la tabla **agg_resultado** en 
 
 ![](img/06.JPG)
 
+##Cargue de Información en ArcGIS Pro
+Para visualizar la información una vez procesada por Hadoop, 
 
-
+![](img/07.JPG)
+![](img/08.JPG)
 
 
 # Agregación de Datos Formato CSV en Polígonos.
