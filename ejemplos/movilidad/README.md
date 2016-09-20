@@ -30,6 +30,8 @@ Como parte de la integración hacia Hadoop las herramientas permiten desde ArcGIS
    []HDFS TCP Port Number: 50070
    []HDFS Username: root
    []HDFS Remote File: /user/root/movilidad/data/Barrios.json
+   
+   ![](img/03.JPG)
 
 3. Como resultado podrá verificar que la información es copiada.  Use el siguiente vinculo para verificar que la informacion es cargada.
 
