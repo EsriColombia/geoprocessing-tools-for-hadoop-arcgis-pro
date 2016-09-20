@@ -22,7 +22,7 @@ Como parte de la integración hacia Hadoop las herramientas permiten desde ArcGIS
 
  ![](img/02.JPG)
 
-Especifique los parámetros:
+ Especifique los parámetros:
 
 	FC: Feature Class que será transformado a JSON
 	Barrios.json: Archivo JSON resultado de la transformación a formato JSON
