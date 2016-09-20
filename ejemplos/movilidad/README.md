@@ -152,8 +152,14 @@ Verifique los parámetros del modelo:
    
 > **Nota**: Los parámetros de conexion al Cluster Hadoop estan especificados en el modelo. De requerirse cambiarlos estos deben ser modificados en el modelo.
 
-
 ![](img/08.JPG)
+
+Adicione el resultado del Modelo en ArcGIS Pro, y clasefiquelos por los campos tanto "count", o "v", correspondiente a las velocidades promedio. Utilice las capacidades que ofrece ArcGIS Pro para simbolozarlos. 
+
+
+![](img/10.JPG)
+
+
 
 
 # Agregación de Datos Formato CSV en Polígonos.
