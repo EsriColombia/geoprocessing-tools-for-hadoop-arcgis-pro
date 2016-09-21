@@ -1,5 +1,5 @@
 # geoprocessing-tools-for-hadoop-arcgis-pro
-El __Geoprocessing Tools for Hadoop (ArcGIS Pro)__ proporciona herramientas para ayudar con la integración con Hadoop. Específicamente las herramientas permiten:
+__Geoprocessing Tools for Hadoop (ArcGIS Pro)__ proporciona herramientas para ayudar con la integración con Hadoop. Específicamente las herramientas permiten:
 
 * Permite el intercambio de datos entre una [ArcGIS Geodatabase](http://resources.arcgis.com/en/help/main/10.2/index.html#/What_is_a_geodatabase/003n00000001000000/) y un Sistema Hadoop, y  
 * Permite a los usuarios de ArcGIS ejecutar Jobs.
