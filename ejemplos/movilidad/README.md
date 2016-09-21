@@ -91,7 +91,7 @@ Elimine la tabla M01 si existe:
 ```bash
 drop table M01;
 ```
-Defina el esque para para la creacion de la tabla.  Los datos estan almacenados en formato CSV (valores separados por coma), el cual esta soportado por Hive de forma Nativa.
+Defina el esquema  para la creación de la tabla.  Los datos estan almacenados en formato CSV (valores separados por coma), el cual esta soportado por Hive de forma Nativa.
 
 
 ```sql
