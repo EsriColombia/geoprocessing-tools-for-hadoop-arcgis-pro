@@ -4,8 +4,8 @@ __Geoprocessing Tools for Hadoop (ArcGIS Pro)__ proporciona herramientas para ay
 * Permite el intercambio de datos entre una [ArcGIS Geodatabase](http://resources.arcgis.com/en/help/main/10.2/index.html#/What_is_a_geodatabase/003n00000001000000/) y un Sistema Hadoop, y  
 * Permite a los usuarios de ArcGIS ejecutar Jobs.
 
-## Elementos
-
+## Elementos.
+ 
 * Herramientas para convertir entre Feature Classes en una Geodatabase y archivos JSON formateado.
 * Herramientas que copian archivos desde ArcGIS a Hadoop y viceversa.
 * Herramientas para ejecutar un flujo de trabajo [Oozie](http://oozie.apache.org/) en Hadoop, y verificar el estado del flujo de trabajo.
